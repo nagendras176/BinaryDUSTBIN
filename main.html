@@ -10,8 +10,7 @@
         <script>
           var socket = io();
           var port;
-          fetch("https://binarydustbin.herokuapp.com/port").then((response)=>{alert(response.text)})
-        
+          fetch("https://binarydustbin.herokuapp.com/port").then(response=>response.text()).then(data=>alert(data))
           socket.on('data',(data)=>{
                  alert('NEW DATA RECIVED FROM WEBSOCKET'+data);
                  location.reload();
