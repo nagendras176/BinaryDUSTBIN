@@ -10,6 +10,7 @@ const io=new Server(server)
 let db1=1;
 let db2=0;
 let db3=0;
+const port=process.env.PORT;
 
 //number of sockets connected 
 let no_webSoc=0;
@@ -31,6 +32,11 @@ app.get('/', (req, res) => {
     console.log(`>>DATA_UPDATE: STATES OF THE DUSTBINS ARE ${db1} ${db2} ${db3}`)
     io.emit('data',JSON.stringify([db1,db2,db3]))
     res.sendStatus(200)})
+
+app.get('/port',(req,res)=>{
+   res.json(port)
+})
+  
   
 
 
@@ -40,7 +46,7 @@ io.on('connect',(socket)=>{
   socket.on('disconnect',()=>{no_webSoc--})
   })
 
-  server.listen(process.env.PORT ,()=>{
+  server.listen(port,()=>{
       console.log('BINARY DUSTBIN SERVER IS RUNNING')
   })
 
