@@ -10,7 +10,7 @@
         <script>
           var socket = io();
           var port;
-          fetch("https://binarydustbin.herokuapp.com/port").then(response=>response.text()).then(data=>port=data)
+          fetch("https://binarydustbin.herokuapp.com/port").then(response=>response.text()).then(data=>alert(data))
           alert(port)
 
           
@@ -123,7 +123,7 @@
 <script>
     function onloading(){
           var port;
-          fetch("https://binarydustbin.herokuapp.com/port").then(response=>response.text()).then(data=>port=data)
+          
           document.getElementById("Img1").src="https://https://binarydustbin.herokuapp.com:"+port+"/dustbin1";
           document.getElementById("Img2").src="https://https://binarydustbin.herokuapp.com:"+port+"/dustbin2";
           document.getElementById("Img3").src="https://https://binarydustbin.herokuapp.com:"+port+"/dustbin3";
