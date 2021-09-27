@@ -40,8 +40,8 @@ io.on('connect',(socket)=>{
   socket.on('disconnect',()=>{no_webSoc--})
   })
 
-  server.listen(4000,()=>{
-      console.log('BINARY DUSTBIN SERVER IS RUNNING ON PORT 4000')
+  server.listen(80,()=>{
+      console.log('BINARY DUSTBIN SERVER IS RUNNING ON PORT 80')
   })
 
   app.get('/dustbin1',(req,res)=>{
