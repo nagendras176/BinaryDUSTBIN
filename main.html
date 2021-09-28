@@ -123,12 +123,12 @@
 <script>
     function onloading(){
           var port;
-          
+          fetch("https://binarydustbin.herokuapp.com/port").then(response=>response.text()).then(data=>{port=data})
           document.getElementById("Img1").src="https://https://binarydustbin.herokuapp.com:"+port+"/dustbin1";
           document.getElementById("Img2").src="https://https://binarydustbin.herokuapp.com:"+port+"/dustbin2";
           document.getElementById("Img3").src="https://https://binarydustbin.herokuapp.com:"+port+"/dustbin3";
           document.getElementById("college").src="https://https://binarydustbin.herokuapp.com:"+port+"/college";
-          alert('If this is mobile, please switch to Desktop Mode Since, web is not designed responisve')
+          alert('If this is mobile, please switch to Desktop Mode Since, website is not designed responisve')
           alert("https://https://binarydustbin.herokuapp.com:"+port+"/dustbin1");
           }
 </script>
